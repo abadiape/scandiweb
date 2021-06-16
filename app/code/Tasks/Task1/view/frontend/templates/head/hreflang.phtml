@@ -1,0 +1,23 @@
+<?php
+/**
+ * This file is part of the Tasks Task1 module
+ *
+ * (c) Scandiweb
+ *
+ * For the full copyright and license information, please view the NOTICE
+ * and LICENSE files that were distributed with this source code.
+ */
+
+/** @var Tasks\Task1\Block\Head\Hreflang $block  */
+
+$storeLanguage = $block->getStoreLanguage();
+$baseUrl = $block->getBaseUrl();
+$cmsPageUrl = $block->isCmsPage() ? $block->getCmsPageUrl() : '';
+$isUsedInMultipleStores = $block->isUsedInMultipleStores();
+?>
+
+<?php if (count($isUsedInMultipleStores)): ?>
+    <?php foreach ($isUsedInMultipleStores as $storeId): ?>
+        <link rel="alternate" hreflang="<?= $block->getStoreLocale($storeId) ?>" href="<?= $block->getStoreUrl($storeId) . $cmsPageUrl ?>" >
+    <?php endforeach; ?>
+<?php endif; ?>
