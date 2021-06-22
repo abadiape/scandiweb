@@ -107,7 +107,7 @@ class ColorChange extends Command
         $this->clearCache();
 
         $output->writeln("Changing buttons color to: " . $hexColorCode . " For Store ID: " . $storeId);
-        $output->writeln("Store Locale is: " . $storeLocale . " For Store ID: " . $storeId . "<br/>");
+        $output->writeln("Store Locale is: " . $storeLocale . " For Store ID: " . $storeId);
 
         //Trigger static assets compilation and deployment for a particular Store.
         $this->deployStaticContent($output, $storeLocale);
