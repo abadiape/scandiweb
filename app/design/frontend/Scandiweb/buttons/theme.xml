@@ -1,0 +1,10 @@
+<!--
+/**
+ * @copyright   Copyright (c) 2021 Scandiweb, Inc
+ * @author      Pedro Abadia <abadiape@gmail.com>
+ */
+-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>Scandiweb</title>
+    <parent>Magento/blank</parent>
+</theme>

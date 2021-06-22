@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Tasks_Task2
+ *
+ * @copyright Copyright (c) 2021 Scandiweb, Inc (https://scandiweb.com/)
+ * @author    Pedro Abadia <abadiape@gmail.com>
+ *
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="color-change" xsi:type="object">Tasks\Task2\Console\Command\ColorChange</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Css\PreProcessor\Adapter\Less\Processor">
+        <plugin name="button_color_change" type="Tasks\Task2\Plugin\Framework\Css\PreProcessor\Adapter\Less\ProcessorPlugin" sortOrder="1" disabled="false" />
+    </type>
+    <type name="Tasks\Task2\Console\Command\ColorChange">
+        <arguments>
+            <argument name="shell" xsi:type="object">Magento\Framework\App\Shell</argument>
+        </arguments>
+    </type>
+</config>
