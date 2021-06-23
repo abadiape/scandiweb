@@ -12,12 +12,11 @@
 //  ---------------------------------------------
 /* Variable definitions */
 @themeColor: #1979c5;
-@color-text: #ffffff;
 @media-common: true;
 
 &when (@media-common = true) {
     .action.primary, .action-primary {
-        background-color: @themeColor;
-        color: @color-text;
+        background: @themeColor;
+        border: 1px solid @themeColor !important;
     }
 }

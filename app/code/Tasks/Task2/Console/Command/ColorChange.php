@@ -181,7 +181,14 @@ class ColorChange extends Command
     protected function removeFrontendStylesStaticFiles($storeLocale)
     {
         $path = self::STATIC_FRONTEND_STYLES_PATH . $storeLocale . '/css/styles-*';
+        $files = glob($path);
+        foreach($files as $file) {
+            if (is_file($file) ) {
+                unlink($file);
+            }
+        }
 
+        $path = 'var/view_preprocessed/' . $path;
         $files = glob($path);
         foreach($files as $file) {
             if (is_file($file) ) {
